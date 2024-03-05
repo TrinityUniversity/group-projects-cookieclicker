@@ -5,6 +5,14 @@
 # Home page
 GET        /                             controllers.Application.index
 
+
+
+GET     /login                          controllers.loginCreateAccount.login
+
+POST    /validateInfo                   controllers.loginCreateAccount.validateInfo
+
+POST    /createAccount                  controllers.loginCreateAccount.createAccount
+
 # Prefix must match `play.assets.urlPrefix`
 GET        /assets/*file                 controllers.Assets.at(file)
 GET        /versionedAssets/*file        controllers.Assets.versioned(path="/public", file: Asset)
